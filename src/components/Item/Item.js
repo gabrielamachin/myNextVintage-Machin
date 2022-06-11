@@ -1,9 +1,11 @@
-const Item = ({ name, img }) => {
+import { Link } from 'react-router-dom'
+
+const Item = ({ name, img, id }) => {
     return (
         <li>
             <img src={img} alt={name}/>
             {name}
-            <button>Ver detalle</button>
+            <Link to={`/detail/${id}`}>Ver detalle</Link>
         </li>
     )
 }
