@@ -1,11 +1,12 @@
 import Item from '../Item/Item'
+import { memo } from 'react'
 
 const ItemList = ({ products }) => {
     return(
-        <ul>
+        <div>
             {products.map(prod => <Item key={prod.id} {...prod} />)}
-        </ul>
+        </div>
     )
 }
 
-export default ItemList
+export default memo (ItemList)
