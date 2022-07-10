@@ -1,24 +1,10 @@
-import { useState, createContext, useRef } from "react";
+import { useState, createContext } from "react";
 
 const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     console.log(cart)
-    const countRenderRef = useRef(0)
-
-    // useEffect(() => {
-    //     const cartSaved = localStorage.getItem('cart')
-    //     const cartSavedParsed = JSON.parse(cartSaved)
-    //     setCart(cartSavedParsed)
-    // }, [])
-
-    // useEffect(() => {
-    //     if(countRenderRef.current > 0) {
-    //         localStorage.setItem('cart', JSON.stringify(cart))
-    //     }
-    //     countRenderRef.current += 1
-    // }, [cart])
     
     const addItem = (productToAdd) => {
 
