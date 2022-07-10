@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -11,7 +10,7 @@ import { Navigate } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NotificationProvider>
         <CartContextProvider>
           <BrowserRouter>
@@ -22,6 +21,7 @@ function App() {
               <Route path='/detail/:productId' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='*' element={<Navigate to='/'/>} />
+              {/* <Route path='/checkout' element={<Checkout />} /> */}
             </Routes>
           </BrowserRouter>
         </CartContextProvider>
