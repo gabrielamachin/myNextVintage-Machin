@@ -92,23 +92,23 @@ const Checkout = () => {
           <div className="row g-3">
             <div className="col-md-6">
               <label htmlFor="nombre" className="form-label formTextColor">Nombre</label>
-              <input type="text" className="form-control" id="nombre" placeholder="Ingresa tu nombre" value={name} onChange={(e) => setName(e.target.value)} required />
+              <input type="text" autocomplete="off" className="form-control" id="nombre" placeholder="Ingresa tu nombre" value={name} onChange={(e) => setName(e.target.value)} required />
             </div>
             <div className="col-md-6">
               <label htmlFor="apellido" className="form-label formTextColor">Apellido</label>
-              <input type="text" className="form-control" id="apellido" placeholder="Ingresa tu apellido" value={surname} onChange={(e) => setSurname(e.target.value)} required />
+              <input type="text" autocomplete="off" className="form-control" id="apellido" placeholder="Ingresa tu apellido" value={surname} onChange={(e) => setSurname(e.target.value)} required />
             </div>
             <div className="col-md-4">
               <label htmlFor="email" className="form-label formTextColor">Email</label>
-              <input type="text" className="form-control" id="email" placeholder="alguien@ejemplo.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              <input type="text" autocomplete="off" className="form-control" id="email" placeholder="alguien@ejemplo.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="col-md-4">
               <label htmlFor="confirmaEmail" className="form-label formTextColor"> Confirmá tu email</label>
-              <input type="text" className="form-control" id="confirmaEmail" placeholder="Confirma tu email" required />
+              <input type="text" autocomplete="off" className="form-control" id="confirmaEmail" placeholder="Confirma tu email" required />
             </div>
             <div className="col-md-4">
               <label htmlFor="telefono" className="form-label formTextColor"> Teléfono</label>
-              <input type="text" className="form-control" id="telefono" placeholder="+54 11 123456" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+              <input type="text" autocomplete="off" className="form-control" id="telefono" placeholder="+54 11 123456" value={phone} onChange={(e) => setPhone(e.target.value)} required />
             </div>
             <div className="col-12">
               <button className="btn btn-secondary" type="button" value="Enviar" onClick={handleCreateOrder}>Realizar compra</button>
