@@ -2,6 +2,7 @@
 
 Proyecto realizado para el curso de React en Coderhouse, comisión 31865. Consiste en un ecommerce para indumentaria y accesorios reciclados de segunda mano.
 
+![userflow](https://user-images.githubusercontent.com/55659433/179116519-3d27ad8e-202f-41db-9ad2-4bf37c69b099.gif)
 
 
 ## Ejecutar localmente
@@ -19,4 +20,3 @@ Ver .env.example.
 * React  
 * Bootstrap 5  
 * Firebase  
-![userflow](https://user-images.githubusercontent.com/55659433/179110466-8d11ebf6-5e34-45b8-b617-64a5987b27f9.gif)
