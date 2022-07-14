@@ -1,0 +1,14 @@
+.cardWidth {
+    width: 20rem;
+    border-style: none;
+}
+
+.itemImg {
+    height: 15rem;
+    object-fit: scale-down;
+    object-position: center;
+}
+
+.colorTitle {
+    color: #f26d85;
+}

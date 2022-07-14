@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Button from '../Button/Button'
 const Counter = ({initial, stock, onAdd}) => {
     const [count, setCount] = useState(initial)
     const [result, setResult] = useState(0)

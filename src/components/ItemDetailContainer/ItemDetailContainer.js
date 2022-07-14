@@ -1,3 +1,4 @@
+import './ItemDetailContainer.css'
 import { useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
@@ -24,12 +25,12 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     if(loading) {
-        return <h1>Cargando</h1>
+        return <h1 className='textTitle'>Cargando</h1>
     }
 
     return (
         <>
-            <h1>Detalle del producto</h1>
+            <h1 className='textTitle'>Detalle del producto</h1>
             <ItemDetail {...product} />
         </>
     )

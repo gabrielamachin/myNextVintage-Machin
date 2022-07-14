@@ -3,9 +3,11 @@ import { memo } from 'react'
 
 const ItemList = ({ products }) => {
     return(
-        <div>
+        <div className="container pt-3">
+            <div className="row">
             {products.map(prod => <Item key={prod.id} {...prod} />)}
-        </div>
+            </div>
+            </div>
     )
 }
 

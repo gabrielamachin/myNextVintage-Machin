@@ -1,0 +1,15 @@
+.cardSize {
+    height: 16rem;
+    width: 20rem;
+    margin: auto;
+}
+
+.detailImg {
+    height: 15rem;
+    object-fit: scale-down;
+    object-position: center;
+}
+
+.textColor {
+    color: #f26d85;
+}

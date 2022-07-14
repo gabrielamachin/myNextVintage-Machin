@@ -1,3 +1,4 @@
+import './ItemCart.css'
 import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 
@@ -11,7 +12,7 @@ const ItemCart = ({ id, name, quantity, price }) => {
     return (
         <article>
             <header>
-                <h2>
+                <h2 className='itemTitle'>
                     {name}
                 </h2>
             </header>
@@ -27,7 +28,7 @@ const ItemCart = ({ id, name, quantity, price }) => {
                  <p>
                      Subtotal: ${price * quantity}
                  </p>
-                 <button onClick={() => handleRemove(id)}>X</button>
+                 <button className='btn btn-secondary' onClick={() => handleRemove(id)}>X</button>
             </footer>
         </article>
     )

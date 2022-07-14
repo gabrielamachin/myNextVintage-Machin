@@ -1,3 +1,4 @@
+import './ItemDetail.css'
 import { useState, useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import CartContext from '../../context/CartContext'
@@ -12,39 +13,25 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     const setNotification = useNotification()
 
     const handleOnAdd = (quantity) => {
-        setNotification('success',`se agregaron ${quantity} ${name}`)
+        setNotification('success',`Se agregó al carrito ${quantity} ${name}`)
         addItem({ id, name, price, quantity})
         setQuantityAdded(quantity)
     }
 
     return (
-        <article>
-            <header>
-                <h2>
-                    {name}
-                </h2>
-            </header>
-            <picture>
-                <img src={img} alt={name} />
-            </picture>
-            <section>
-                <p>
-                    Categoria: {category}
-                </p>
-                <p>
-                    Descripción: {description}
-                </p>
-                <p>
-                    Precio: {price}
-                </p>
-            </section>           
-            <footer>
+        <div className='card cardSize'>
+            <img src={img} className='card-img-top detailImg' alt='producto' />
+            <div className='card-body'>
+                <h5 className='card-title text-center pt-4 pb-2 textColor'>{name}</h5>
+                <p className='card-text'>Categoría: {category}</p>
+                <p className='card-text'>Descripción: {description}</p>
+                <p className='card-text'>Precio: ${price}</p>
                 { quantityAdded === 0 
                     ?  <ItemCount stock={stock} onAdd={handleOnAdd} />
-                    :  <Link to='/cart'>Terminar compra</Link>
+                    :  <Link className='btn btn-secondary' to='/cart'>Terminar compra</Link>
                 }
-            </footer>
-        </article>
+            </div>
+        </div>
     )
 }
 

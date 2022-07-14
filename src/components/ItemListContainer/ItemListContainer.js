@@ -1,3 +1,4 @@
+import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
@@ -34,20 +35,20 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
         setTimeout(() => {
-            setTitle('Nuestros productos')
+            setTitle('Conocé nuestros productos')
         }, 3000)
     }, [])
 
     if(loading) {
-        return <h1>Cargando...</h1>
+        return <h1 className='fontText text-center'>Cargando...</h1>
     }
 
     return(
         <div>
-            <h1>{title}</h1>
+            <h1 className='fontText text-center pt-5'>{title}</h1>
             {products.length > 0 
-                ? <ItemList products={products}/>
-                : <h1>No hay productos</h1>
+                ? <ItemList products={products}/> 
+                : <h1 className='fontText text-center'>No hay productos en stock</h1>
             }
         </div>
     )

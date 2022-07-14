@@ -10,7 +10,8 @@ const Notification = ({ message, severity, otherClass }) => {
         height: 'auto',
         color: 'white',
         padding: '10px 20px 10px 20px',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        background: 'pink',
     }
 
     const config = true ? {

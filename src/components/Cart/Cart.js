@@ -1,9 +1,8 @@
+import './Cart.css'
 import { useState, useContext } from "react"
 import CartContext from "../../context/CartContext"
 import ItemCartList from "../ItemCartList/ItemCartList"
-
 import { useNotification } from "../../notification/Notification"
-
 import { addDoc, collection, writeBatch, getDocs, query, where, documentId } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
 
@@ -20,10 +19,11 @@ const Cart = () => {
 
         const objOrder = {
             buyer: {
-                name: 'Sebastian Zuviria',
-                email: 'seba@zuv.com',
-                phone: '123456789',
-                address: 'Direccion 123'
+                // name: 'Gabriela M',
+                // email: 'gabrielam@email.com',
+                // phone: '012345',
+                // address: 'casa 123',
+                // comment: 'comentario 1'
             },
             items: cart,
             total: total
@@ -75,29 +75,22 @@ const Cart = () => {
 
     }
 
-    // const handleUpdateStock = () => {
-    //     const docRef = doc(db, 'products', 'UhQsaWPNkWSOqT9jOAWm')
-
-    //     updateDoc(docRef, { stock: 1000 })
-    // }
-
     if(loading) {
-        return <h1>Se esta generando su orden...</h1>
+        return <h1 className='fontTitle'>Se está generando su orden...</h1>
     }
 
     if(totalQuantity === 0) {
-        return <h1>No hay productos en el carrito</h1>
+        return <h1 className='fontTitle'>No hay productos en el carrito</h1>
     }
 
     return (
-        <>
-            <h1>Cart</h1>
+        <div className='containerCart'>
+            <h1 className='fontTitle'>Productos en el carrito:</h1>
             <ItemCartList productsAdded={cart}/>
             <h3>Total: ${total}</h3>
-            <button onClick={() => clearCart()}>Limpiar carrito</button>
-            <button onClick={handleCreateOrder}>Generar Orden</button>
-            {/* <button onClick={handleUpdateStock} className="Button">Stock 1000</button> */}
-        </>
+            <button className='btn btn-secondary m-2' onClick={() => clearCart()}>Limpiar carrito</button>
+            <button className='btn btn-secondary m-2' onClick={handleCreateOrder}>Generar orden</button>
+        </div>
     )
 }
 
